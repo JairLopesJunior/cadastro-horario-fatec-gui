@@ -1,0 +1,33 @@
+<p>CADASTRO DE HORÁRIOS</p>
+
+<form
+  [formGroup]="cadastro"
+  style="margin-bottom: 5rem"
+  class="mt-3"
+  (ngSubmit)="onSubmit()"
+>
+    <div class="row mb-3">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Horário:</span>
+                <input class="form-control" formControlName="horario" type="time" class="form-control" placeholder="Horário" aria-label="Horário" aria-describedby="basic-addon2">
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <select (change)="playSound($event)" formControlName="arquivo" class="form-select" aria-label="Default select example">
+                <option selected>Selecione uma música</option>
+                <option value="school_bell.mp3">school_bell.mp3</option>
+                <option value="Super-Mario-3.mp3">Super-Mario-3.mp3</option>
+                <option value="Super-Mario-World.mp3">Super-Mario-World.mp3</option>
+            </select>
+        </div>
+    </div>
+
+    <div align="center">
+        <button class="btn btn-primary" [disabled]="cadastro.invalid">
+          Cadastrar
+        </button>
+    </div>
+
+</form>

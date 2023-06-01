@@ -1,0 +1,15 @@
+<div [class.bordered]="isBordered" class="card h-100" style="min-height: 100px; max-height: 358px; margin: 10px !important">
+    <div class="card-body" align="right">
+        <h5 class="card-title" style="width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Horário atual {{ currentTime }}</h5>
+    </div>
+
+    <div class="card-body" align="center">
+        <h5 class="card-title" style="width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{ frase }} {{ horario }}</h5>
+    </div>
+
+    <div align="center">
+        <button class="btnPlayAudio btn btn-success btn mb-3" style="width: 50%" (click)="playSound()">
+            Reproduzir Áudio
+        </button>
+    </div>
+</div>
